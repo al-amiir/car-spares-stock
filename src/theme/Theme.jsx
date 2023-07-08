@@ -1,6 +1,6 @@
 import React from "react";
 // Theme
-import { createTheme } from "@mui/material";
+import { CssBaseline, createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 
 // Create Theme
@@ -19,6 +19,7 @@ const theme = createTheme({
 const Theme = ({ children, direction }) => {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <div dir={direction}>{children}</div>
     </ThemeProvider>
   );
